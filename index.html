@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Chemistry Models</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f0f4f8;
+      }
+      canvas {
+        display: block;
+      }
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      .description {
+        margin-left: 20px;
+        /* ...additional styles... */
+      }
+    </style>
+  </head>
+  <body class="p-4">
+    <h1 class="text-2xl font-bold mb-4">常见化学元素的原子模型</h1>
+    <select id="element-select" class="mb-4 p-2 border rounded">
+      <option value="oxygen">氧</option>
+      <option value="silicon">硅</option>
+      <option value="aluminum">铝</option>
+      <option value="iron">铁</option>
+      <option value="calcium">钙</option>
+      <option value="sodium">钠</option>
+      <option value="potassium">钾</option>
+    </select>
+    <div class="description">
+      <ul>
+        <li>质子数: <span id="proton-count"></span></li>
+        <li>中子数: <span id="neutron-count"></span></li>
+        <li>电子数: <span id="electron-count"></span></li>
+      </ul>
+    </div>
+    <div class="legend flex justify-center mt-4">
+      <div class="flex items-center mx-2">
+        <span class="w-5 h-5 bg-red-500 inline-block mr-2"></span>质子</span>
+      </div>
+      <div class="flex items-center mx-2">
+        <span class="w-5 h-5 bg-green-500 inline-block mr-2"></span>中子
+      </div>
+      <div class="flex items-center mx-2">
+        <span class="w-5 h-5 bg-blue-500 inline-block mr-2"></span>电子
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
